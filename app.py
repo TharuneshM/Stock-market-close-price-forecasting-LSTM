@@ -39,8 +39,8 @@ test_size = len(df1) - training_size
 train_data, test_data = df1[0:training_size,:], df1[training_size:len(df1),:1]
 
 #LOADING THE MODEL
-from keras.models import load_model
-model = load_model('model_h5.h5')
+import tensorflow
+model = tensorflow.keras.models.load_model('model_h5.h5')
 
 #FUNCTION TO CREATE DATASET
 def create_dataset(dataset, time_step=1):
