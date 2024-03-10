@@ -40,7 +40,7 @@ train_data, test_data = df1[0:training_size,:], df1[training_size:len(df1),:1]
 
 #LOADING THE MODEL
 import tensorflow
-model = tensorflow.keras.models.load_model('model_h5.h5')
+model = tensorflow.keras.models.load_model('model_h5.h5',compile=False)
 
 #FUNCTION TO CREATE DATASET
 def create_dataset(dataset, time_step=1):
