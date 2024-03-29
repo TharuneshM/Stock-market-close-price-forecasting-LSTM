@@ -33,7 +33,7 @@ from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler(feature_range=(0,1))
 df1 = scaler.fit_transform(np.array(df1).reshape(-1,1))
 
-#SPLITTING THE DATA
+#SPLITTING THE DATA SEQUENTIALLY
 training_size = int(len(df1) * 0.70)
 test_size = len(df1) - training_size
 train_data, test_data = df1[0:training_size,:], df1[training_size:len(df1),:1]
